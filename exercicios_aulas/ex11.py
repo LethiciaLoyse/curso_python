@@ -1,13 +1,22 @@
 ''' 
 Aula 50 - Algoritmo do cpf
 '''
-indice = 0
-multiplicador = 10
+cpf = '99213530048'
 
-cpf = input('Informe os 9 primeiros digitos dos seu cpf: ')
-conversao_cpf = int(cpf)
+nove_digitos = cpf[0:9]
+regressao = 10
 
-while cpf > 10:
-   print(cpf[indice])
-   indice += 1
+
+resultado = 0
+
+for digito in nove_digitos:
+  resultado += int(digito) * regressao
+  regressao -= 1
+
+digito = ((resultado * 10) % 11)
+
+if digito <= 9:
+  print(digito)
+else:
+  ...
 
