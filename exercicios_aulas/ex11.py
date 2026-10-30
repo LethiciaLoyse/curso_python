@@ -4,8 +4,7 @@ Aula 50 - Algoritmo do cpf
 
 # Primeiro digito 
 
-cpf_cliente = '99213530048'
-
+cpf_cliente = '99213530048'.replace('.', '-')
 nove_digitos = cpf_cliente[0:9]
 contador_regressivo_1 = 10
 
